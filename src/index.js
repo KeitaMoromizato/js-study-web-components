@@ -24,11 +24,11 @@ XElementPrototype.attributeChangedCallback = (attribute, oldValue, newValue) => 
   console.log('prototype changed', attribute, oldValue, newValue);
 };
 
-const XElement = document.registerElement('x-element', {
+const XAlertButton = document.registerElement('x-alert-button', {
   prototype: XElementPrototype,
   extends: 'button',
 });
 
-const xElement = new XElement();
-xElement.textContent = '独自のボタン';
-document.body.appendChild(xElement);
+const xAlertButton = new XAlertButton();
+xAlertButton.textContent = '独自のボタン';
+document.body.appendChild(xAlertButton);
